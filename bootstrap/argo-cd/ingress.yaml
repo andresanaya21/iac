@@ -2,6 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: argocd
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
 spec:
   ingressClassName: nginx
   rules:
@@ -12,9 +15,9 @@ spec:
         path: /
         backend:
           service:
-            name: argocd-server
+            name: argogrpc
             port:
-              number: 80
+              number: 443
       - pathType: Prefix
         path: /
         backend:
