@@ -5,6 +5,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
+    cert-manager.io/cluster-issuer: tactil5g-cluster-issuer
 spec:
   ingressClassName: nginx
   rules:
@@ -25,3 +26,7 @@ spec:
             name: argocd-server
             port:
               number: 443
+  tls:
+   - hosts:
+       - argocd.argoproj.int
+     secretName: tls-argocd
