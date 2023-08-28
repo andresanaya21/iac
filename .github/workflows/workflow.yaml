@@ -18,4 +18,5 @@ jobs:
        export TEST=$(hostname)
        echo "This test was executed in $TEST"
        ls -la
+       cat /etc/*release
 
