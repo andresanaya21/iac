@@ -46,7 +46,8 @@ jobs:
       kubectl version --client
 
       echo "### getting kubeconfig ###"
-      echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
+      base64 --help
+      #echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
 
       echo "see kubeconfig"
       cat mgmt.kubeconfig
