@@ -1,0 +1,13 @@
+{
+  "appName": "clusters1",
+  "userGivenName": "clusters1",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "clusters/",
+  "srcRepoURL": "https://github.com/andresanaya21/iac.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
