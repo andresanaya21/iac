@@ -47,11 +47,7 @@ jobs:
 
       echo "### getting kubeconfig ###"
       base64 --help
-      #echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
-
-      echo "see kubeconfig"
-      cat mgmt.kubeconfig
-      #kubectl get pods -A --kubeconfig mgmt.kubeconfig
+      echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
 
 
 
