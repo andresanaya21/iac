@@ -45,9 +45,10 @@ jobs:
       sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
       kubectl version --client
 
-      echo "### getting kubeconfig"
+      echo "### getting kubeconfig ###"
       echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
 
+      echo "see kubeconfig"
       cat mgmt.kubeconfig
       #kubectl get pods -A --kubeconfig mgmt.kubeconfig
 
