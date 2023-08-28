@@ -6,15 +6,16 @@ on:
    branches: [ main ]
 jobs:
  build:
-   name: Build-job
+   name: Install dependencies
    runs-on: self-hosted
    steps:
    - name: Checkout
      uses: actions/checkout@v2
  
-   - name: echo
+   - name: shell
      run: |
-       echo "### starting test ###"
+       echo "### starting workflow ###"
        export TEST=$(hostname)
        echo "This test was executed in $TEST"
+       ls -la
 
