@@ -8,7 +8,7 @@ spec:
     namespace: ''
     server: 'https://kubernetes.default.svc'
   source:
-    path: apps/cluster-capi-quickstart
+    path: clusters/cluster-capi-quickstart
     repoURL: 'https://github.com/andresanaya21/iac.git'
     targetRevision: cluster-capi-quickstart
     helm:

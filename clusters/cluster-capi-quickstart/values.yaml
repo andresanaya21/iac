@@ -1,0 +1,5 @@
+cluster:
+  name: capi-quickstart
+  masterNodes: 2
+  workerNodes: 2
+  version: v1.27.3
