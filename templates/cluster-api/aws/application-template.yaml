@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ${BRANCH}
+spec:
+  destination:
+    name: ''
+    namespace: ''
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: apps/${BRANCH}
+    repoURL: 'https://github.com/andresanaya21/iac.git'
+    targetRevision: ${BRANCH}
+    helm:
+      valueFiles:
+        - ${BRANCH}/values.yaml
+  project: clusters
+  syncPolicy:
+    automated: null
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
