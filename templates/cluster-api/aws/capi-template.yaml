@@ -6,7 +6,7 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: capi-quickstart
+  name: {{ .Values.cluster.name }}
   namespace: default
 spec:
   clusterNetwork:
@@ -16,27 +16,27 @@ spec:
   controlPlaneRef:
     apiVersion: controlplane.cluster.x-k8s.io/v1beta1
     kind: KubeadmControlPlane
-    name: capi-quickstart-control-plane
+    name: {{ .Values.cluster.name }}-control-plane
   infrastructureRef:
     apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
     kind: AWSCluster
-    name: capi-quickstart
+    name: {{ .Values.cluster.name }}
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
 kind: AWSCluster
 metadata:
-  name: capi-quickstart
+  name: {{ .Values.cluster.name }}
   namespace: default
 spec:
   region: eu-west-3
   sshKeyName: discovery-ec2
-  bastion:
-    enabled: true
+#  bastion:
+#    enabled: true
 ---
 apiVersion: controlplane.cluster.x-k8s.io/v1beta1
 kind: KubeadmControlPlane
 metadata:
-  name: capi-quickstart-control-plane
+  name: {{ .Values.cluster.name }}-control-plane
   namespace: default
 spec:
   kubeadmConfigSpec:
@@ -63,14 +63,14 @@ spec:
     infrastructureRef:
       apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
       kind: AWSMachineTemplate
-      name: capi-quickstart-control-plane
-  replicas: 1
-  version: v1.27.3
+      name: {{ .Values.cluster.name }}-control-plane
+  replicas: {{ .Values.cluster.masterNodes }}
+  version: {{ .Values.cluster.version }}
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
 kind: AWSMachineTemplate
 metadata:
-  name: capi-quickstart-control-plane
+  name: {{ .Values.cluster.name }}-control-plane
   namespace: default
 spec:
   template:
@@ -84,11 +84,11 @@ spec:
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: MachineDeployment
 metadata:
-  name: capi-quickstart-md-0
+  name: {{ .Values.cluster.name }}-md-0
   namespace: default
 spec:
-  clusterName: capi-quickstart
-  replicas: 1
+  clusterName: {{ .Values.cluster.name }}
+  replicas: {{ .Values.cluster.workerNodes }}
   selector:
     matchLabels: null
   template:
@@ -97,18 +97,18 @@ spec:
         configRef:
           apiVersion: bootstrap.cluster.x-k8s.io/v1beta1
           kind: KubeadmConfigTemplate
-          name: capi-quickstart-md-0
-      clusterName: capi-quickstart
+          name: {{ .Values.cluster.name }}-md-0
+      clusterName: {{ .Values.cluster.name }}
       infrastructureRef:
         apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
         kind: AWSMachineTemplate
-        name: capi-quickstart-md-0
-      version: v1.27.3
+        name: {{ .Values.cluster.name }}-md-0
+      version: {{ .Values.cluster.version }}
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
 kind: AWSMachineTemplate
 metadata:
-  name: capi-quickstart-md-0
+  name: {{ .Values.cluster.name }}-md-0
   namespace: default
 spec:
   template:
@@ -122,7 +122,7 @@ spec:
 apiVersion: bootstrap.cluster.x-k8s.io/v1beta1
 kind: KubeadmConfigTemplate
 metadata:
-  name: capi-quickstart-md-0
+  name: {{ .Values.cluster.name }}-md-0
   namespace: default
 spec:
   template:
