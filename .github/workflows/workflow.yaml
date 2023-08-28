@@ -46,9 +46,14 @@ jobs:
       kubectl version --client
 
       echo "### getting kubeconfig ###"
-      echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > mgmt.kubeconfig
+      echo ${{ secrets.KUBECONFIG_MASTER }} | base64 --decode > ~/.kube/config
 
-      cat mgmt.kubeconfig
+      kubectl get nodes
+
+      #clusterawsadm bootstrap iam create-cloudformation-stack --region eu-west-3
+      export AWS_B64ENCODED_CREDENTIALS=$(clusterawsadm bootstrap credentials encode-as-profile)
+      #clusterctl init --infrastructure aws
+
 
 
 
