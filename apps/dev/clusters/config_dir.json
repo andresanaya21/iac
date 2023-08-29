@@ -3,7 +3,7 @@
   "userGivenName": "dev",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
-  "srcPath": "deploy-clusters",
+  "srcPath": "dev-clusters",
   "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
   "srcTargetRevision": "staging-cluster",
   "labels": null,
