@@ -1,0 +1,13 @@
+{
+  "appName": "prod",
+  "userGivenName": "prod",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "app-clusters/prod",
+  "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
