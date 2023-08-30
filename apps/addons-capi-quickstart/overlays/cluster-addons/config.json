@@ -1,0 +1,11 @@
+{
+  "appName": "addons-capi-quickstart",
+  "userGivenName": "addons-capi-quickstart",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/addons-capi-quickstart/overlays/cluster-addons",
+  "srcRepoURL": "https://github.com/andresanaya21/iac.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
