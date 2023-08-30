@@ -1,0 +1,13 @@
+{
+  "appName": "app-dev",
+  "userGivenName": "app-dev",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "p-clusters/dev",
+  "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
