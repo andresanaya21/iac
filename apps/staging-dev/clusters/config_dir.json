@@ -5,7 +5,7 @@
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "app-clusters/dev",
   "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
-  "srcTargetRevision": "",
+  "srcTargetRevision": "auto-br/*",
   "labels": null,
   "annotations": null,
   "exclude": "",
