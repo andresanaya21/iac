@@ -1,6 +1,6 @@
 {
-  "appName": "cluster-addons-cluster-1-team",
-  "userGivenName": "cluster-addons-cluster-1-team",
+  "appName": "dev/cluster-1-team/cluster-addons",
+  "userGivenName": "dev/cluster-1-team/cluster-addons",
   "destNamespace": "default",
   "destServer": "https://cluster-1-team-apiserver-899338770.eu-west-3.elb.amazonaws.com:6443",
   "srcPath": "apps/dev/cluster-1-team/cluster-addons/overlays/cluster-addons-cluster-1-team",
