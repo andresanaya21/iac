@@ -7,6 +7,5 @@
   "srcRepoURL": "https://github.com/andresanaya21/iac.git",
   "srcTargetRevision": "",
   "labels": null,
-  "annotations": null,
-  "scrTargetRevision": "staging-clusters"
+  "annotations": null
 }
