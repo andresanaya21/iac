@@ -1,6 +1,6 @@
 {
-  "appName": "dev/cluster-2-edge",
-  "userGivenName": "dev/cluster-2-edge",
+  "appName": "cluster-2-edge",
+  "userGivenName": "cluster-2-edge",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "app-clusters/dev/cluster-2-edge",
