@@ -1,0 +1,13 @@
+{
+  "appName": "dev/cluster-1-aws",
+  "userGivenName": "dev/cluster-1-aws",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "app-clusters/dev/cluster-1-aws",
+  "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
+  "srcTargetRevision": "auto-br/cluster-1-aws",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
