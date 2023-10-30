@@ -1,6 +1,6 @@
 {
-  "appName": "dev/cluster-1-outpost",
-  "userGivenName": "dev/cluster-1-outpost",
+  "appName": "cluster-1-outpost",
+  "userGivenName": "cluster-1-outpost",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "app-clusters/dev/cluster-1-outpost",
