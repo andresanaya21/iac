@@ -1,6 +1,6 @@
 {
-  "appName": "dev/cluster-0-edge/cluster-addons",
-  "userGivenName": "dev/cluster-0-edge/cluster-addons",
+  "appName": "cluster-addons-cluster-0-edge",
+  "userGivenName": "cluster-addons-cluster-0-edge",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/dev/cluster-0-edge/cluster-addons/overlays/cluster-addons-cluster-0-edge",
