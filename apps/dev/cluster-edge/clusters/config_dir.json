@@ -1,0 +1,13 @@
+{
+  "appName": "dev/cluster-edge",
+  "userGivenName": "dev/cluster-edge",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "app-clusters/dev/cluster-edge",
+  "srcRepoURL": "https://github.com/andresanaya21/provisioning.git",
+  "srcTargetRevision": "auto-br/cluster-edge",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
