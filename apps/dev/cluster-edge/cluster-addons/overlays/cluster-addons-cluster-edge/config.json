@@ -1,0 +1,11 @@
+{
+  "appName": "dev/cluster-edge/cluster-addons",
+  "userGivenName": "dev/cluster-edge/cluster-addons",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/dev/cluster-edge/cluster-addons/overlays/cluster-addons-cluster-edge",
+  "srcRepoURL": "https://github.com/andresanaya21/iac.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
